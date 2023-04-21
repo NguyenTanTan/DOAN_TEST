@@ -7,23 +7,23 @@ html(lang="en")
     // Google Font: Source Sans Pro
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback")
     // Font Awesome
-    link(rel="stylesheet", href="plugins/fontawesome-free/css/all.min.css")
+    link(rel="stylesheet", href="/plugins/fontawesome-free/css/all.min.css")
     // Ionicons
     link(rel="stylesheet", href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
     // Tempusdominus Bootstrap 4
-    link(rel="stylesheet", href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css")
+    link(rel="stylesheet", href="/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css")
     // iCheck
-    link(rel="stylesheet", href="plugins/icheck-bootstrap/icheck-bootstrap.min.css")
+    link(rel="stylesheet", href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css")
     // JQVMap
-    link(rel="stylesheet", href="plugins/jqvmap/jqvmap.min.css")
+    link(rel="stylesheet", href="/plugins/jqvmap/jqvmap.min.css")
     // Theme style
     link(rel="stylesheet", href="/css/adminlte.min.css")
     // overlayScrollbars
-    link(rel="stylesheet", href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css")
+    link(rel="stylesheet", href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css")
     // Daterange picker
-    link(rel="stylesheet", href="plugins/daterangepicker/daterangepicker.css")
+    link(rel="stylesheet", href="/plugins/daterangepicker/daterangepicker.css")
     // summernote
-    link(rel="stylesheet", href="plugins/summernote/summernote-bs4.min.css")
+    link(rel="stylesheet", href="/plugins/summernote/summernote-bs4.min.css")
   body.hold-transition.sidebar-mini.layout-fixed
     .wrapper
       // Preloader
@@ -70,7 +70,7 @@ html(lang="en")
                       | Brad Diesel
                       span.float-right.text-sm.text-danger
                         i.fas.fa-star
-                    p.text-sm Call me whenever you can...
+                    p.text-sm Call me whenever you can.
                     p.text-sm.text-muted
                       i.far.fa-clock.mr-1
                       | 4 Hours Ago
@@ -425,26 +425,29 @@ html(lang="en")
                           th(scope='col') Done
                           th(scope='col') T&aacute;c v&#x1EE5;
                       tbody
-                        tr
-                          th(scope='row') 1
-                          td
-                            | Hoàn thành khóa học NodeJS
-                          td
-                            | 1. Cài đặt Express
-                            br
-                            | 2. Học Express nhanh chóng
-                            br 
-                            | 3. Tìm hiểu Template Engine
-                          td
-                            span.badge.badge-warning &Dstrok;ang x&#x1EED; l&yacute;
-                          td 26:06:2020 14:00
-                          td 26:06:2020 14:00
-                          td 0%
-                          td
-                            a.btn.btn-success.btn-sm.rounded-0.text-white(href='tasks/update/:id' type='button' data-toggle='tooltip' data-placement='top' title='Edit')
-                              i.fa.fa-edit
-                            a.btn.btn-danger.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Delete')
-                              i.fa.fa-trash
+                        each task in tasks 
+                          tr
+                            th(scope='row') 1
+                            td= task.name 
+                            td= task.description 
+                            td
+                              case task.status 
+                                when '0'
+                                  span.badge.badge-primary= 'New'
+                                when '1'
+                                  span.badge.badge-warning= 'In progress'
+                                when '2'
+                                  span.badge.badge-warning= 'Resolve'
+                                when '3'
+                                  span.badge.badge-success= 'Finish'
+                            td 26:06:2020 14:00
+                            td 26:06:2020 14:00
+                            td= `${parseInt(task.done)*10}%`
+                            td
+                              a.btn.btn-success.btn-sm.rounded-0.text-white(href=`/tasks/update/${task._id}` type='button' data-toggle='tooltip' data-placement='top' title='Edit')
+                                i.fa.fa-edit
+                              a.btn.btn-danger.btn-sm.rounded-0.text-white(href=`/tasks/delete/${task._id}` type='button' data-toggle='tooltip' data-placement='top' title='Delete')
+                                i.fa.fa-trash
                   // /.card-body
                   .card-footer.clearfix
                     button.btn.btn-primary.float-right(type="button")
@@ -468,32 +471,32 @@ html(lang="en")
       // /.control-sidebar
     // ./wrapper
     // jQuery
-    script(src="plugins/jquery/jquery.min.js")
+    script(src="/plugins/jquery/jquery.min.js")
     // jQuery UI 1.11.4
-    script(src="plugins/jquery-ui/jquery-ui.min.js")
+    script(src="/plugins/jquery-ui/jquery-ui.min.js")
     // Resolve conflict in jQuery UI tooltip with Bootstrap tooltip
     script.
       $.widget.bridge('uibutton', $.ui.button)
     // Bootstrap 4
-    script(src="plugins/bootstrap/js/bootstrap.bundle.min.js")
+    script(src="/plugins/bootstrap/js/bootstrap.bundle.min.js")
     // ChartJS
-    script(src="plugins/chart.js/Chart.min.js")
+    script(src="/plugins/chart.js/Chart.min.js")
     // Sparkline
-    script(src="plugins/sparklines/sparkline.js")
+    script(src="/plugins/sparklines/sparkline.js")
     // JQVMap
-    script(src="plugins/jqvmap/jquery.vmap.min.js")
-    script(src="plugins/jqvmap/maps/jquery.vmap.usa.js")
+    script(src="/plugins/jqvmap/jquery.vmap.min.js")
+    script(src="/plugins/jqvmap/maps/jquery.vmap.usa.js")
     // jQuery Knob Chart
-    script(src="plugins/jquery-knob/jquery.knob.min.js")
+    script(src="/plugins/jquery-knob/jquery.knob.min.js")
     // daterangepicker
-    script(src="plugins/moment/moment.min.js")
-    script(src="plugins/daterangepicker/daterangepicker.js")
+    script(src="/plugins/moment/moment.min.js")
+    script(src="/plugins/daterangepicker/daterangepicker.js")
     // Tempusdominus Bootstrap 4
-    script(src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js")
+    script(src="/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js")
     // Summernote
-    script(src="plugins/summernote/summernote-bs4.min.js")
+    script(src="/plugins/summernote/summernote-bs4.min.js")
     // overlayScrollbars
-    script(src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js")
+    script(src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js")
     // AdminLTE App
     script(src="/js/adminlte.js")
     // AdminLTE for demo purposes

@@ -12,9 +12,13 @@ router.get('/add', taskcontroller.show);
 
 router.get('/update', taskcontroller.update);
 
-router.get('/update/:id', TaskController2.update)
+router.get('/update/:id/', TaskController2.showUpdate)
+
+router.get('/update/:id/edit', TaskController2.update)
 
 router.get('/delete/:id', TaskController2.delete)
+
+router.get('/tasks', TaskController2.show)
 
 
 

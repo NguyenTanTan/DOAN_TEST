@@ -13,7 +13,6 @@ app.use(express.static('public'));
 // Connect DB
 db.connect()
 
-
 // Middleware parser
 app.use(express.urlencoded({
   extended: true
@@ -29,7 +28,6 @@ app.use('/tasks', tasks);
 app.get('/', function(req, res){
   res.render('homePage');
 });
-
 
 app.listen(3000, () => {
   console.log(`Example app listening on port http://localhost:3000`)

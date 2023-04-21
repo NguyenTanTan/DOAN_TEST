@@ -8,7 +8,9 @@ const TaskSchema = new Schema({
     description: { type: String},
     status: { type: String },
     startAt: { type: Date, default: Date.now },
+    done: {type: String},
     endAt: {type: Date}
+
 }, {
     collection: 'task'
 })
