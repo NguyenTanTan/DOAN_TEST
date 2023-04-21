@@ -1,18 +1,23 @@
 var express = require('express');
 var router = express.Router();
+var userController = require('../controllers/UserController')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('Users Route is active');
 });
 
-router.get('/login', function(req, res) {
-  res.render('loginPage');
-});
+router.get('/login', userController.showLogIn);
 
-router.get('/signup', function(req, res) {
-  res.render('signUpPage');
-});
+router.get('/signup', userController.showSignUp);
+
+// router.get('/login', function(req, res) {
+//   res.render('loginPage');
+// });
+
+// router.get('/signup', function(req, res) {
+//   res.render('signUpPage');
+// });
 
 // router.get('/add', function(req, res) {
 //   res.send('Bạn đang tạo task mới');

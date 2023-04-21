@@ -1,7 +1,7 @@
 class TaskController {
 
   // [GET] /add
-  add(req, res){
+  show(req, res){
     res.render('addTask');
 
   }
