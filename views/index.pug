@@ -388,7 +388,7 @@ html(lang="en")
             // Main row
             .row
               // Left col
-              section.col-lg-7.connectedSortable
+              section.col-lg-12
                 // Custom tabs (Charts with tabs)
                 
                 
@@ -402,7 +402,7 @@ html(lang="en")
                     .card-tools
                       ul.pagination.pagination-sm
                         li.page-item
-                          a.page-link(href="#") &amp;laquo;
+                          a.page-link(href="#") <<
                         li.page-item
                           a.page-link(href="#") 1
                         li.page-item
@@ -410,7 +410,7 @@ html(lang="en")
                         li.page-item
                           a.page-link(href="#") 3
                         li.page-item
-                          a.page-link(href="#") &amp;raquo;
+                          a.page-link(href="#") >>
                   // /.card-header
                   .card-body
                     ul.todo-list(data-widget="todo-list")
@@ -425,10 +425,6 @@ html(lang="en")
                           label(for="todoCheck1")
                         // todo text
                         span.text Design a nice theme
-                        // Emphasis label
-                        small.badge.badge-danger
-                          i.far.fa-clock
-                          | 2 mins
                         // General tools such as edit or delete
                         .tools
                           i.fas.fa-edit
@@ -441,9 +437,6 @@ html(lang="en")
                           input#todoCheck2(type="checkbox", , name="todo2", checked)
                           label(for="todoCheck2")
                         span.text Make the theme responsive
-                        small.badge.badge-info
-                          i.far.fa-clock
-                          | 4 hours
                         .tools
                           i.fas.fa-edit
                           i.fas.fa-trash-o
@@ -455,9 +448,7 @@ html(lang="en")
                           input#todoCheck3(type="checkbox", , name="todo3")
                           label(for="todoCheck3")
                         span.text Let theme shine like a star
-                        small.badge.badge-warning
-                          i.far.fa-clock
-                          | 1 day
+
                         .tools
                           i.fas.fa-edit
                           i.fas.fa-trash-o
@@ -469,9 +460,7 @@ html(lang="en")
                           input#todoCheck4(type="checkbox", , name="todo4")
                           label(for="todoCheck4")
                         span.text Let theme shine like a star
-                        small.badge.badge-success
-                          i.far.fa-clock
-                          | 3 days
+
                         .tools
                           i.fas.fa-edit
                           i.fas.fa-trash-o
@@ -483,9 +472,7 @@ html(lang="en")
                           input#todoCheck5(type="checkbox", , name="todo5")
                           label(for="todoCheck5")
                         span.text Check your messages and notifications
-                        small.badge.badge-primary
-                          i.far.fa-clock
-                          | 1 week
+
                         .tools
                           i.fas.fa-edit
                           i.fas.fa-trash-o
@@ -497,9 +484,6 @@ html(lang="en")
                           input#todoCheck6(type="checkbox", , name="todo6")
                           label(for="todoCheck6")
                         span.text Let theme shine like a star
-                        small.badge.badge-secondary
-                          i.far.fa-clock
-                          | 1 month
                         .tools
                           i.fas.fa-edit
                           i.fas.fa-trash-o

@@ -21,7 +21,7 @@ app.use('/tasks', tasks);
 
 
 app.get('/', function(req, res){
-  res.render('addTask');
+  res.render('index');
 });
 
 
