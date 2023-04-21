@@ -1,16 +1,18 @@
 var express = require('express');
 var router = express.Router();
+const taskcontroller = require('../controllers/TaskController')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  // res.send('Tasks Route is active');
-  res.render('addTask');
-});
+// router.get('/', function(req, res, next) {
+//   // res.send('Tasks Route is active');
+//   res.render('addTask');
+// });
 
-router.get('/add', function(req, res) {
-  res.render('addTask');
-  // res.send('Bạn đang tạo task mới');
-});
+// router.get('/add', function(req, res) {
+//   res.render('addTask');
+//   // res.send('Bạn đang tạo task mới');
+// });
+router.get('/add', taskcontroller.add);
 
 // router.get('/:id', function(req, res) {
 //   res.send('Thông tin task có id là: ' + req.params.id);
