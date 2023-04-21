@@ -9,15 +9,7 @@ const taskcontroller = require('../controllers/TaskController')
 // });
 router.get('/add', taskcontroller.show);
 
-// router.get('/:id', function(req, res) {
-//   res.send('Thông tin task có id là: ' + req.params.id);
-// });
-
-router.get('/update', function(req, res) {
-  res.render('updateTask');
-  // res.send('Bạn đang cập nhật task có id là: ' + req.params.id);
-});
-
+router.get('/update', taskcontroller.update);
 
 
 
