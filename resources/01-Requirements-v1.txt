@@ -1,0 +1,82 @@
+A. Phân tích nghiệp vụ
+1. Login / Register (Users=>Table)
+2. Quản lý tasks (Tasks => Table)
+Các việc cần làm theo thứ tự
+1. Phân tích nghiệp vụ (làm gì,cụ thể ra sao,**giới hạn** tới đâu)
+
+
+2. Backend (Thao tác với server,csdl+java)
+
+
+
+3. FrontEnd (Dựng lên giao diện,html,css,js)
+
+1. Upload file
+2. Thanh toán khóa học
+3. Quyền access file url
+
+
+
+
+* Mục tiêu 13/03/2023*
+1*. Phân tích yêu cầu đồ án
+
++ Làm đề tài gì:
+=> Xây dựng hệ thống quản lý công việc cá nhân.
++ Cụ thể hóa đề tài:
+
+* Lý do chọn đề tài:
+Dễ triển khai,nhanh có sản phẩm,dễ học,tốn ít thời gian,
+không phát sinh thêm module mới.
+* Lựa chọn đề tài cụ thể: Ứng dụng quản lý công việc cá nhân
+
+
+* Phân tích nghiệp vụ:
+
+Người dùng vào hệ thống làm gì?
++ Thêm task
++ Cập nhật trạng thái của task
++ Xóa task
++ Thống kê,báo cáo tình trạng làm việc trong 1 đơn vị thời gian
+=> Kế thừa kthuc học máy vào để đưa ra lời khuyên
+Action:OK
+
+
+
+2. Vẽ ra lược đồ csdl
+
+Users(
+user_id:
+user_name:
+user_password:
+user_questions: (Câu hỏi bảo mật lấy lại mk)
+)
+
+Tasks(
+task_id
+task_title
+task_time_start
+task_time_finish
+task_content
+task_current_status
+task_warning(ghi chú)
+task_category(FK)
+
+_user_id(FK)
+
+)
+
+Categories(
+id_category(PK),
+category_name
+
+)
+Yêu cầu:
+Nội <=> Lý do tương ứng,mục đích để làm gì?
+Địa điểm <=> Dùng để làm gì?
+
+
+
+3*. Training git
+
+

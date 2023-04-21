@@ -1,0 +1,49 @@
+extends layout
+
+block content
+    .content-wrapper
+        // Content Header (Page header)
+        section.content-header
+            .container-fluid
+                .row.mb-2
+                    .col-sm-6
+                        h1 Report Error
+                    .col-sm-6
+                        ol.breadcrumb.float-sm-right
+                            li.breadcrumb-item
+                                a(href='#') Home
+                            li.breadcrumb-item.active Report Error
+    
+        // Main content
+        section.content
+            .container-fluid
+                .row
+                    .col-md-12
+                        .card.card-danger
+                            .card-header
+                                h3.card-title Report Error
+                            .card-body
+                                form
+                                    .row
+                                        .col-sm-12
+                                            .form-group
+                                                label Select Error
+                                                select.form-control
+                                                    option(value='') -- select error --
+                                                    option(value='1') Log In
+                                                    option(value='2') Profile
+                                                    option(value='3') Notification
+                                                    option(value='4') Remove Task
+                                                    option(value='5') Update Task
+                                                    option(value='6') Add Task
+                                                    option(value='7') Other
+                                    .row
+                                        .col-sm-12
+                                            .form-group
+                                                label Description
+                                                textarea.form-control(rows='3' placeholder='Enter error description ...')
+                                    .d-flex
+                                        button.ml-auto.btn.btn-primary(type='submit') Send
+                                        button.btn.btn-light.ml-2.mr-2(type='submit') Back
+
+

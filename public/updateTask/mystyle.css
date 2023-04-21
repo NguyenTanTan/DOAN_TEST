@@ -1,0 +1,181 @@
+@media screen and (min-width: 769px) {
+  body {
+    display: flex;
+    padding: 5px;
+    height: 100vh;
+    font-weight: bold;
+    margin: 0px;
+  }
+  body .left-body {
+    width: 16.66%;
+    margin: 5px;
+    background-color: rgba(146, 110, 254, 0.6666666667);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  body .left-body .title {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    text-align: center;
+    background-color: #936EFE;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  body .left-body .title .button-menu {
+    display: none;
+  }
+  body .left-body hr {
+    margin: 2px;
+  }
+  body .left-body .bar-menu ul {
+    list-style: none;
+    width: 100%;
+    top: 80px;
+    padding-left: 0;
+  }
+  body .left-body .bar-menu ul li {
+    padding: 20px;
+    display: block;
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.16);
+  }
+  body .left-body .bar-menu ul li i {
+    color: black;
+  }
+  body .left-body .bar-menu ul li:hover {
+    background-color: white;
+  }
+  body .right-body {
+    width: 83.33%;
+    margin: 5px;
+    padding: 30px 15px 15px 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  body .right-body label {
+    font-weight: bold;
+  }
+  body .right-body .flex-container {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  body .right-body .flex-container textarea {
+    width: 75%;
+    height: 15vh;
+  }
+  body .right-body .flex-container label {
+    width: 15%;
+  }
+  body .right-body .flex-container input {
+    width: 75%;
+  }
+  body .right-body .time-task {
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+  }
+  body .right-body .time-task .haft-content {
+    width: 50%;
+    text-align: center;
+  }
+  body .right-body .time-task .haft-content .haft {
+    display: flex;
+    padding-top: 20px;
+  }
+  body .right-body .time-task .haft-content .haft label {
+    width: 30%;
+  }
+  body .right-body .button-update {
+    background-color: #936EFE;
+    border: none;
+    padding: 5px;
+    margin: 20px;
+    color: white;
+  }
+  body .right-body .button-update:hover {
+    background-color: #392770;
+    color: white;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    font-weight: bold;
+    margin: 0px;
+  }
+  body .left-body {
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  body .left-body .title {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px;
+    text-align: center;
+    background-color: #936EFE;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  body .left-body .title .button-menu {
+    color: white;
+    background-color: #936EFE;
+    border: none;
+    font-size: 20px;
+  }
+  body .left-body .title .button-menu:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  body .left-body hr {
+    margin: 1px;
+  }
+  body .left-body .bar-menu {
+    position: absolute;
+    left: -250%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(146, 110, 254, 0.6666666667);
+  }
+  body .left-body .bar-menu ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0px;
+  }
+  body .left-body .bar-menu ul a {
+    padding: 20px;
+    display: block;
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.16);
+    color: black;
+  }
+  body .left-body .bar-menu ul li:hover {
+    background-color: white;
+  }
+  body .left-body .open-menu {
+    left: 0;
+  }
+  body .right-body {
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  body .right-body label, body .right-body input, body .right-body select, body .right-body textarea {
+    display: block;
+    margin: 10px;
+    padding: 5px;
+  }
+  body .right-body input {
+    width: 80%;
+  }
+  body .right-body textarea {
+    width: 80%;
+    height: 10vh;
+  }
+  body .right-body .button-update {
+    background-color: #936EFE;
+    border: none;
+    padding: 5px;
+    margin: 20px;
+    color: white;
+  }
+  body .right-body .button-update:hover {
+    background-color: #392770;
+    color: white;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,148 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='homePage/css/style.css')
+  link(rel='stylesheet' href='homePage/css/responsive.css')
+  title Task Manager
+.wrapper
+  header.header
+    .header__logo
+      a.header__logo-link(href='#')
+        img.header__logo-img(src='homePage/img/logo.png' alt='logo')
+    ul.header__nav
+      li.header__nav-item.header__nav-choose
+        a.header__nav-item-link(href='#choose-section') Why choose us?
+      li.header__nav-item
+        a.header__nav-item-link(href='#aboutus-section') About us
+      li.header__nav-item
+        a.header__nav-item-link(href='#contact-us') Contact us
+    .header__access
+      a.button.header__access-login(href='/') Log in
+      a.button.header__access-signup(href='/') Sign up
+  main.main
+    #content-section.content-section
+      .content
+        h1.content_slogan
+          | Making Task Management More Easily!
+        p.content__description
+          | Productive working days, achieving more future goals
+        a.button.content__get-started(href='') Get Started
+      .illustration
+        img(src='homePage/img/illustration (1).png' alt='')
+    #choose-section.choose-section
+      h2.choose-section_title
+        | Why Choose Us?
+      h2.choose-section_subtitle
+        | Why We Are The Best?
+      p.choose-section__description
+        | M&#x1ED9;t c&acirc;y l&agrave;m ch&#x1EB3;ng l&ecirc;n non, hai c&acirc;y ch&#x1EE5;m l&#x1EA1;i l&ecirc;n h&ograve;n n&uacute;i Ng&#x1EF1; B&igrave;nh
+      .choose-section__reasons
+        .choose-section__reasons-item
+          .reason-item__index 01
+          h3.reason-item__content No Price
+          p.reason-item__description
+            | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, laborum repudiandae ducimus nemo
+        .choose-section__reasons-item
+          .reason-item__index 02
+          h3.reason-item__content Easy To Use
+          p.reason-item__description
+            | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, laborum repudiandae ducimus nemo
+        .choose-section__reasons-item
+          .reason-item__index 03
+          h3.reason-item__content Best Service
+          p.reason-item__description
+            | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, laborum repudiandae ducimus nemo
+        .choose-section__reasons-item
+          .reason-item__index 04
+          h3.reason-item__content More Features
+          p.reason-item__description
+            | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, laborum repudiandae ducimus nemo
+      button.button Start Now
+    #aboutus-section.aboutus-section
+      h2.aboutus-section__heading About Us
+      p.aboutus-section__description
+        | T&#x1EEB;ng ph&uacute;t c&#x1EE9; m&atilde;i tr&ocirc;i xa phai nh&ograve;a d&#x1EA7;n k&iacute; &#x1EE9;c c&#x1EE7;a &dstrok;&ocirc;i ta, t&#x1EEB;ng ch&uacute;t n&#x1ED7;i nh&#x1EDB;
+        | h&ocirc;m qua &dstrok;&acirc;u v&#x1EC1; l&#x1EA1;c b&#x1B0;&#x1EDB;c c&#x1EE9; th&#x1EBF; ph&ocirc;i pha
+      .aboutus-section__slideshow
+        | active
+        .slide.active
+          .slide__img-wrapper(style="background-image: url('homePage/img/slider1.png')")
+          .slide__quote
+            h2.slide__quote-name L&ecirc; B&aacute; Qu&#x1ED1;c Trung
+            p.slide__quote-content
+              | &quot;Trong cu&#x1ED9;c s&#x1ED1;ng n&agrave;y, &aacute;p l&#x1EF1;c th&igrave; t&#x1EA1;o n&ecirc;n kim ch&#x1EC9; nan. M&#x1ED9;t con ng&#x1EF1;a &dstrok;au, c&#x1EA3; t&agrave;u cao t&#x1ED1;c.
+              | Mu&#x1ED9;n r&#x1ED3;i m&agrave; sao c&ograve;n, nh&igrave;n l&ecirc;n tr&#x1EA7;n nh&agrave; quay ra l&#x1EA1;i quay v&agrave;o.&quot;
+        .slide
+          .slide__img-wrapper(style="background-image: url('homePage/img/slider2.png')")
+          .slide__quote
+            h2.slide__quote-name Nguy&#x1EC5;n T&#x1EA5;n T&acirc;n
+            p.slide__quote-content
+              | &quot;Trong cu&#x1ED9;c s&#x1ED1;ng n&agrave;y, &aacute;p l&#x1EF1;c th&igrave; t&#x1EA1;o n&ecirc;n kim ch&#x1EC9; nan. M&#x1ED9;t con ng&#x1EF1;a &dstrok;au, c&#x1EA3; t&agrave;u cao t&#x1ED1;c.
+              | Mu&#x1ED9;n r&#x1ED3;i m&agrave; sao c&ograve;n, nh&igrave;n l&ecirc;n tr&#x1EA7;n nh&agrave; quay ra l&#x1EA1;i quay v&agrave;o.&quot;
+        .slide
+          .slide__img-wrapper(style="background-image: url('homePage/img/slider3.png')")
+          .slide__quote
+            h2.slide__quote-name Ph&#x1EA1;m Th&#x1ECB; L&ecirc; Nin
+            p.slide__quote-content
+              | &quot;Trong cu&#x1ED9;c s&#x1ED1;ng n&agrave;y, &aacute;p l&#x1EF1;c th&igrave; t&#x1EA1;o n&ecirc;n kim ch&#x1EC9; nan. M&#x1ED9;t con ng&#x1EF1;a &dstrok;au, c&#x1EA3; t&agrave;u cao t&#x1ED1;c.
+              | Mu&#x1ED9;n r&#x1ED3;i m&agrave; sao c&ograve;n, nh&igrave;n l&ecirc;n tr&#x1EA7;n nh&agrave; quay ra l&#x1EA1;i quay v&agrave;o.&quot;
+        .slide
+          .slide__img-wrapper(style="background-image: url('homePage/img/slider4.png')")
+          .slide__quote
+            h2.slide__quote-name L&ecirc; Ho&agrave;ng T&#x1EED; Nguy&ecirc;n Ng&#x1ECD;c
+            p.slide__quote-content
+              | &quot;Trong cu&#x1ED9;c s&#x1ED1;ng n&agrave;y, &aacute;p l&#x1EF1;c th&igrave; t&#x1EA1;o n&ecirc;n kim ch&#x1EC9; nan. M&#x1ED9;t con ng&#x1EF1;a &dstrok;au, c&#x1EA3; t&agrave;u cao t&#x1ED1;c.
+              | Mu&#x1ED9;n r&#x1ED3;i m&agrave; sao c&ograve;n, nh&igrave;n l&ecirc;n tr&#x1EA7;n nh&agrave; quay ra l&#x1EA1;i quay v&agrave;o.&quot;
+        .slide
+          .slide__img-wrapper(style="background-image: url('homePage/img/slider5.png')")
+          .slide__quote
+            h2.slide__quote-name Nguy&#x1EC5;n Danh Nam
+            p.slide__quote-content
+              | &quot;Trong cu&#x1ED9;c s&#x1ED1;ng n&agrave;y, &aacute;p l&#x1EF1;c th&igrave; t&#x1EA1;o n&ecirc;n kim ch&#x1EC9; nan. M&#x1ED9;t con ng&#x1EF1;a &dstrok;au, c&#x1EA3; t&agrave;u cao t&#x1ED1;c.
+              | Mu&#x1ED9;n r&#x1ED3;i m&agrave; sao c&ograve;n, nh&igrave;n l&ecirc;n tr&#x1EA7;n nh&agrave; quay ra l&#x1EA1;i quay v&agrave;o.&quot;
+        span.slide__prev &#x276E;
+        span.slide__next &#x276F;
+      .aboutus-section__slide-controller
+        span.controller__dot.active(data-index='0')
+        span.controller__dot(data-index='1')
+        span.controller__dot(data-index='2')
+        span.controller__dot(data-index='3')
+        span.controller__dot(data-index='4')
+  footer.footer
+    h2#contact-us.footer__heading Contact Us
+    ul.footer__socials
+      li.footer__socials-item
+        a.footer__socials-link(href='https://www.facebook.com/profile.php?id=100006880423614')
+          i.fa-brands.fa-facebook
+      li.footer__socials-item
+        a.footer__socials-link(href='https://web.telegram.org/')
+          i.fa-brands.fa-telegram
+      li.footer__socials-item
+        a.footer__socials-link(href='https://github.com/LBQTrung')
+          i.fa-brands.fa-github
+      li.footer__socials-item
+        a.footer__socials-link(href='https://app.slack.com/client/T04NRGSNAHF/C04N9V7EP2R')
+          i.fa-brands.fa-slack
+    .footer__information
+      p.footer__information-address
+        | &Dstrok;&#x1ECB;a ch&#x1EC9;: T&#x1EA7;ng 2 T&ograve;a nh&agrave; HUET, s&#x1ED1; 1 &dstrok;&#x1B0;&#x1EDD;ng &Dstrok;i&#x1EC7;n Bi&ecirc;n Ph&#x1EE7;, Ph&#x1B0;&#x1EDD;ng V&itilde;nh Ninh, Th&agrave;nh ph&#x1ED1; Hu&#x1EBF;, T&#x1EC9;nh Th&#x1EEB;a Thi&ecirc;n Hu&#x1EBF;, Vi&#x1EC7;t Nam
+      p.footer__information-email
+        | Email: lebaquoctrung@gmail.com
+      p.footer__information-phone
+        | &Dstrok;i&#x1EC7;n tho&#x1EA1;i li&ecirc;n h&#x1EC7;: 0766635748
+      p.footer__information-copyright
+        | &copy; 2023 - B&#x1EA3;n quy&#x1EC1;n thu&#x1ED9;c v&#x1EC1; L&ecirc; B&aacute; Qu&#x1ED1;c Trung
+// Handle scroll choose section quickly
+script.
+  const navChoose = document.querySelector('.header__nav-choose')
+  navChoose.onclick = (event) => {
+  event.preventDefault()
+  scroll(0, 716)
+  }
+script(src='homePage/js/slider.js')

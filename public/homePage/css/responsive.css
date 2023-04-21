@@ -1,0 +1,96 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 760px) {
+    :root {
+        --padding-main: 10px;
+    }
+
+    .content-section {
+        height: 500px;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .illustration {
+        display: none;
+    }
+
+    .slide.active {
+        height: 430px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .slide__quote {
+        margin: 0;
+    }
+
+    .slide__img-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .slide__quote-name {
+        margin-bottom: 20px;
+    }
+
+    .footer__socials-item ~ .footer__socials-item {
+        margin-left: 50px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 992px) {
+    :root {
+        --padding-main: 30px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .content-section {
+        height: 500px;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .illustration{
+        display: none;
+    }
+
+    .choose-section__reasons {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .choose-section__reasons-item {
+        width: 100%;
+        margin: 0 0 20px 0;
+        height: 180px;
+    }
+
+    .reason-item__index {
+        margin-top: 20px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {
+    :root {
+        --padding-main: 50px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1201px) {
+    :root {
+        --padding-main: 100px;
+    }
+}
