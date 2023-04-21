@@ -3,6 +3,22 @@ const mongoose = require('mongoose')
 
 class TaskController2 {
 
+    // [GET] /task/add
+    showAdd(req, res){
+        res.render('addTask');
+    }
+
+    store(req,res){
+        const task = new Task(req.body);
+        task.save()
+          .then(() => {
+            res.redirect('/tasks/tasks')
+          })
+          .catch(err => {
+             res.json("Lỗi j đó")
+          })
+      }
+    
     // [GET] /tasks/
     show(req, res) {
         Task.find({})

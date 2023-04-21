@@ -10,12 +10,14 @@ class TaskController {
     req.body
   }
   store(req,res){
-    res.send('Successfully!')
     const task = new modeltask(req.body);
-    task.save(function(err) {
-      if (err) return handleError(err);
-      // saved!
-    });
+    task.save()
+      .then(() => {
+        res.redirect('/tasks/tasks')
+      })
+      .catch(err => {
+         res.json("Lỗi j đó")
+      })
   }
 }
 
