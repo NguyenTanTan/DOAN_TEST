@@ -13,7 +13,7 @@ router.get('/update/:id/', taskController.showUpdate)
 
 router.put('/update/:id/edit', taskController.update)
 
-router.get('/delete/:id', taskController.delete)
+router.delete('/delete/:id', taskController.delete)
 
 router.get('/', taskController.show)
 

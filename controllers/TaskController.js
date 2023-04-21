@@ -42,7 +42,7 @@ class TaskController2 {
     //   res.render('updateTask', )
     }
 
-    // [PUT] /tasks/update/:id/edit
+    // [PUT] /tasks/update/:id/edit_method=put
     update(req, res){
         Task.updateOne({_id: req.params.id}, req.body)
           .then( () => {
@@ -53,7 +53,7 @@ class TaskController2 {
           })
       }
 
-    // [GET] /tasks/delete/:id
+    // [DELETE] /tasks/delete/:id_method=delete
     delete(req, res) {
         Task.deleteOne({ _id: req.params.id })
         .then(() => {

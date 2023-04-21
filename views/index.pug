@@ -446,7 +446,7 @@ html(lang="en")
                             td
                               a.btn.btn-success.btn-sm.rounded-0.text-white(href=`/tasks/update/${tasks[x] ._id}` type='button' data-toggle='tooltip' data-placement='top' title='Edit')
                                 i.fa.fa-edit
-                              a.btn.btn-danger.btn-sm.rounded-0.text-white(href=`/tasks/delete/${tasks[x]._id}` type='button' data-toggle='tooltip' data-placement='top' title='Delete')
+                              a.btn.btn-danger.btn-sm.rounded-0.text-white(href=`/tasks/delete/${tasks[x]._id}?_method=delete` type='button' data-toggle='tooltip' data-placement='top' title='Delete')
                                 i.fa.fa-trash
                   // /.card-body
                   .card-footer.clearfix
