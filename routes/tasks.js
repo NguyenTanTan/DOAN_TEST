@@ -15,7 +15,7 @@ router.get('/update', taskcontroller.update);
 router.get('/update/:id', TaskController2.update)
 
 router.get('/delete/:id', TaskController2.delete)
-
-
+//Post task
+router.post('/store', taskcontroller.store);
 
 module.exports = router;
