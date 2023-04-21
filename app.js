@@ -3,11 +3,15 @@ var app = express();
 var index = require('./routes/index');
 var users = require('./routes/users');
 var tasks = require('./routes/tasks');
+// var db = require('./models/db')
 
 app.set('view engine', 'pug');
 app.set('views','./views');
 
 app.use(express.static('public'));
+
+// // Connect DB
+// db.connect()
 
 
 //both index.js and things.js should be in same directory
