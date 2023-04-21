@@ -55,3 +55,20 @@ myInput.onkeyup = function() {
     length.classList.add("invalid");
   }
 }
+
+function ansValidation(ev) {
+  ev.preventDefault
+  // there is no input named name
+  //var nameValue = document.getElementById("name").value
+  var nameValue = document.getElementById("username").value
+  var passValue = document.getElementById("psw").value
+  var confpassValue = document.getElementById("psw2").value
+  var string = ""
+  // the typeof operator returns a string.
+  if( nameValue == string){
+      window.alert("Vui lòng nhập Username!")
+  // we use strict validation ( !== ) because it's a good practice.
+  }else if(passValue !== confpassValue) {
+     window.alert("Mật khẩu xác thực không đúng, vui lòng nhập lại!")
+  }
+}

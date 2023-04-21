@@ -27,11 +27,7 @@ app.use('/tasks', tasks);
 
 
 app.get('/', function(req, res){
-<<<<<<< HEAD
   res.render('signupPage');
-=======
-  res.render('homePage');
->>>>>>> 3a3a2680fae38cf4d45eef0ca1759f809f0cffdd
 });
 
 
