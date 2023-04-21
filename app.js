@@ -14,6 +14,12 @@ app.use(express.static('public'));
 db.connect()
 
 
+// Middleware parser
+app.use(express.urlencoded({
+  extended: true
+}))
+app.use(express.json())
+
 //both index.js and things.js should be in same directory
 app.use('/index', index);
 app.use('/users', users);
@@ -21,7 +27,11 @@ app.use('/tasks', tasks);
 
 
 app.get('/', function(req, res){
+<<<<<<< HEAD
   res.render('signupPage');
+=======
+  res.render('homePage');
+>>>>>>> 3a3a2680fae38cf4d45eef0ca1759f809f0cffdd
 });
 
 
