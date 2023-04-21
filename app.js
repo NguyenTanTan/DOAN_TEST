@@ -26,7 +26,7 @@ app.use('/tasks', tasks);
 
 
 app.get('/', function(req, res){
-  res.render('homePage');
+  res.render('signupPage');
 });
 
 app.listen(3000, () => {

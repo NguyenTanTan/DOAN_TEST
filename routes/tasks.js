@@ -21,5 +21,7 @@ router.get('/delete/:id', TaskController2.delete)
 router.get('/tasks', TaskController2.show)
 
 
+//Post task
+router.post('/store', taskcontroller.store);
 
 module.exports = router;
