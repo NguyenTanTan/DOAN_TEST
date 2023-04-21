@@ -3,6 +3,7 @@ block content
   .content-wrapper
     .card.card-primary
       .card-header
+<<<<<<< HEAD
         h3.card-title Update Task
       .card-body
         form(action="", method="post") 
@@ -48,6 +49,191 @@ block content
               option(data-select2-id='122') 100% 
           td
             button.col-lg-3.btn.btn-block.bg-gradient-success.btn-lg(type='submit') Update Task 
+=======
+        h3.card-title Add Task
+      form.card-body(action=`/tasks/update/${task._id}/edit?_method=put` method='POST')
+        .form-group(data-select2-id='109').col-lg-10
+          label Status
+          select.form-control.select2bs4.select2-hidden-accessible(style='width: 100%;' data-select2-id='25' tabindex='-1' aria-hidden='true' name='status')
+            case task.status
+              when '0'
+                option(data-select2-id='112' value='0') New
+                option(data-select2-id='113' value='1') In progress
+                option(data-select2-id='114' value='2') Resolved
+                option(data-select2-id='115' value='3') Finish
+              when '1'
+                option(data-select2-id='113' value='1') In progress
+                option(data-select2-id='112' value='0') New
+                option(data-select2-id='114' value='2') Resolved
+                option(data-select2-id='115' value='3') Finish 
+              when '2'
+                option(data-select2-id='114' value='2') Resolved
+                option(data-select2-id='112' value='0') New
+                option(data-select2-id='113' value='1') In progress
+                option(data-select2-id='115' value='3') Finish 
+              when '3'
+                option(data-select2-id='115' value='3') Finish     
+                option(data-select2-id='112' value='0') New
+                option(data-select2-id='113' value='1') In progress
+                option(data-select2-id='114' value='2') Resolved
+        .form-group.col-lg-10
+          label Name Task
+          input.form-control(type='text' placeholder='Enter ...' value= task.name name='name')  
+        .form-group.col-lg-10
+          label Description
+          textarea.form-control(rows='5' placeholder='Enter ...' name='description')= task.description
+        .form-group
+          label Date Start:
+          .input-group.col-lg-6
+            .input-group-prepend
+              span.input-group-text
+                i.far.fa-clock
+            input.datepickle.form-control.float-right(type='text' name='startAt')
+          label Date End:
+          .input-group.col-lg-6
+            .input-group-prepend
+              span.input-group-text
+                i.far.fa-clock
+            input.form-control.float-right(type='text' name='endAt')
+        .form-group(data-select2-id='109').col-lg-6
+          label % Done
+          select.form-control.select2bs4.select2-hidden-accessible(style='width: 100%;' data-select2-id='25' tabindex='-1' aria-hidden='true' name='done')
+            case task.done 
+              when '0'
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100%
+              when '1'
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100% 
+              when '2'
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100% 
+              when '3'
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100%
+              when '4'
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100% 
+              when '5'
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100% 
+              when '6'
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100% 
+              when '7'
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100% 
+              when '8'
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100% 
+              when '9'
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+                option(data-select2-id='122' value='10') 100%
+              when '10'
+                option(data-select2-id='122' value='10') 100% 
+                option(data-select2-id='112' value='0') 0%
+                option(data-select2-id='113' value='1') 10%
+                option(data-select2-id='114' value='2') 20%  
+                option(data-select2-id='115' value='3') 30%
+                option(data-select2-id='116' value='4') 40%
+                option(data-select2-id='117' value='5') 50%  
+                option(data-select2-id='118' value='6') 60%
+                option(data-select2-id='119' value='7') 70%
+                option(data-select2-id='120' value='8') 80%  
+                option(data-select2-id='121' value='9') 90%
+        td
+          button.col-lg-2.btn.btn-block.bg-gradient-success.btn-lg(type='submit') Update Task 
+>>>>>>> 94ad78f69ccfba968a96617b5d9d190efb6f7ffb
 
       .card-footer
         

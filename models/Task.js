@@ -7,9 +7,10 @@ const TaskSchema = new Schema({
     name: { type: String, maxLength: 255 },
     description: { type: String},
     status: { type: String },
-    startAt: { type: String, default:String },
-    endAt: {type: String},
-    done: {type:String}
+    startAt: { type: Date, default: Date.now },
+    done: {type: String},
+    endAt: {type: Date, default: Date.now}
+
 }, {
     collection: 'task'
 })
