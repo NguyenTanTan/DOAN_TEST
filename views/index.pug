@@ -413,80 +413,133 @@ html(lang="en")
                           a.page-link(href="#") >>
                   // /.card-header
                   .card-body
-                    ul.todo-list(data-widget="todo-list")
-                      li
-                        // drag handle
-                        span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
-                        // checkbox
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck1(type="checkbox", , name="todo1")
-                          label(for="todoCheck1")
-                        // todo text
-                        span.text Design a nice theme
-                        // General tools such as edit or delete
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash-o
-                      li
-                        span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck2(type="checkbox", , name="todo2", checked)
-                          label(for="todoCheck2")
-                        span.text Make the theme responsive
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash-o
-                      li
-                        span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck3(type="checkbox", , name="todo3")
-                          label(for="todoCheck3")
-                        span.text Let theme shine like a star
-
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash-o
-                      li
-                        span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck4(type="checkbox", , name="todo4")
-                          label(for="todoCheck4")
-                        span.text Let theme shine like a star
-
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash-o
-                      li
-                        span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck5(type="checkbox", , name="todo5")
-                          label(for="todoCheck5")
-                        span.text Check your messages and notifications
-
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash-o
-                      li
-                        span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck6(type="checkbox", , name="todo6")
-                          label(for="todoCheck6")
-                        span.text Let theme shine like a star
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash-o
+                    table.table.table-striped
+                      thead
+                        tr
+                          th(scope='col') #
+                          th(scope='col') M&atilde;
+                          th(scope='col') Kh&aacute;ch h&agrave;ng
+                          th(scope='col') S&#x1EA3;n ph&#x1EA9;m
+                          th(scope='col') S&#x1ED1; l&#x1B0;&#x1EE3;ng
+                          th(scope='col') Gi&aacute; tr&#x1ECB;
+                          th(scope='col') Tr&#x1EA1;ng th&aacute;i
+                          th(scope='col') Th&#x1EDD;i gian
+                          th(scope='col') T&aacute;c v&#x1EE5;
+                      tbody
+                        tr
+                          th(scope='row') 1
+                          td 1212
+                          td
+                            | Phan V&abreve;n C&#x1B0;&#x1A1;ng 
+                            br
+                            |         0988859692
+                          td
+                            a(href='#') Samsung Galaxy A51 (8GB/128GB)
+                          td 1
+                          td 7.790.000&#x20AB;
+                          td
+                            span.badge.badge-warning &Dstrok;ang x&#x1EED; l&yacute;
+                          td 26:06:2020 14:00
+                          td
+                            a.btn.btn-success.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Edit')
+                              i.fa.fa-edit
+                            a.btn.btn-danger.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Delete')
+                              i.fa.fa-trash
+                        tr
+                          th(scope='row') 2
+                          td 1213
+                          td
+                            | Minh Anh 
+                            br
+                            |         0868873382
+                          td
+                            a(href='#') Samsung Galaxy A51 (8GB/128GB)
+                          td 1
+                          td 7.790.000&#x20AB;
+                          td
+                            span.badge.badge-warning &Dstrok;ang x&#x1EED; l&yacute;
+                          td 26:06:2020 14:00
+                          td
+                            a.btn.btn-success.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Edit')
+                              i.fa.fa-edit
+                            a.btn.btn-danger.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Delete')
+                              i.fa.fa-trash
+                        tr
+                          th(scope='row') 3
+                          td 1214
+                          td
+                            | Tr&#x1EA7;n Thu H&#x1EB1;ng 
+                            br
+                            |         0234343545
+                          td
+                            a(href='#') &Dstrok;i&#x1EC7;n tho&#x1EA1;i iPhone 11 Pro Max 64GB
+                          td 1
+                          td 29.490.000&#x20AB;
+                          td
+                            span.badge.badge-success Ho&agrave;n th&agrave;nh
+                          td 26:06:2020 14:00
+                          td
+                            a.btn.btn-success.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Edit')
+                              i.fa.fa-edit
+                            a.btn.btn-danger.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Delete')
+                              i.fa.fa-trash
+                        tr
+                          th(scope='row') 4
+                          td 1212
+                          td
+                            | Tu&#x1EA5;n Anh 
+                            br
+                            |         091236768
+                          td
+                            a(href='#') Apple MacBook Pro Touch 2020 i5 512GB
+                          td 1
+                          td 47.990.000&#x20AB;
+                          td
+                            span.badge.badge-warning &Dstrok;ang x&#x1EED; l&yacute;
+                          td 26:06:2020 14:00
+                          td
+                            a.btn.btn-success.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Edit')
+                              i.fa.fa-edit
+                            a.btn.btn-danger.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Delete')
+                              i.fa.fa-trash
+                        tr
+                          th(scope='row') 3
+                          td 1214
+                          td
+                            | Tr&#x1EA7;n Thu H&#x1EB1;ng 
+                            br
+                            |         0234343545
+                          td
+                            a(href='#') &Dstrok;i&#x1EC7;n tho&#x1EA1;i iPhone 11 Pro Max 64GB
+                          td 1
+                          td 29.490.000&#x20AB;
+                          td
+                            span.badge.badge-success Ho&agrave;n th&agrave;nh
+                          td 26:06:2020 14:00
+                          td
+                            a.btn.btn-success.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Edit')
+                              i.fa.fa-edit
+                            a.btn.btn-danger.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Delete')
+                              i.fa.fa-trash
+                        tr
+                          th(scope='row') 4
+                          td 1212
+                          td
+                            | Tu&#x1EA5;n Anh 
+                            br
+                            |         091236768
+                          td
+                            a(href='#') Apple MacBook Pro Touch 2020 i5 512GB
+                          td 1
+                          td 47.990.000&#x20AB;
+                          td
+                            span.badge.badge-success Ho&agrave;n th&agrave;nh
+                          td 26:06:2020 14:00
+                          td
+                            a.btn.btn-success.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Edit')
+                              i.fa.fa-edit
+                            a.btn.btn-danger.btn-sm.rounded-0.text-white(href='#' type='button' data-toggle='tooltip' data-placement='top' title='Delete')
+                              i.fa.fa-trash
                   // /.card-body
                   .card-footer.clearfix
                     button.btn.btn-primary.float-right(type="button")

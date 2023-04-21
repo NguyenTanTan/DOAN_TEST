@@ -55,48 +55,49 @@ head
       .card-header
         h3.card-title Add Task
       .card-body
-        .form-group(data-select2-id='109').col-lg-10
-          label Status
-          select.form-control.select2bs4.select2-hidden-accessible(style='width: 100%;' data-select2-id='25' tabindex='-1' aria-hidden='true')
-            option(data-select2-id='112') New
-            option(data-select2-id='113') In progress
-            option(data-select2-id='114') Resolved
-            option(data-select2-id='115') Finish     
-        .form-group.col-lg-10
-          label Name Task
-          input.form-control(type='text' placeholder='Enter ...')  
-        .form-group.col-lg-10
-          label Description
-          textarea.form-control(rows='5' placeholder='Enter ...')
-        .form-group
-          label Date Start:
-          .input-group.col-lg-6
-            .input-group-prepend
-              span.input-group-text
-                i.far.fa-clock
-            input.datepickle.form-control.float-right(type='text')
-          label Date End:
-          .input-group.col-lg-6
-            .input-group-prepend
-              span.input-group-text
-                i.far.fa-clock
-            input.form-control.float-right(type='text')
-        .form-group(data-select2-id='109').col-lg-6
-          label % Done
-          select.form-control.select2bs4.select2-hidden-accessible(style='width: 100%;' data-select2-id='25' tabindex='-1' aria-hidden='true')
-            option(data-select2-id='112') 0%
-            option(data-select2-id='113') 10%
-            option(data-select2-id='114') 20%  
-            option(data-select2-id='115') 30%
-            option(data-select2-id='116') 40%
-            option(data-select2-id='117') 50%  
-            option(data-select2-id='118') 60%
-            option(data-select2-id='119') 70%
-            option(data-select2-id='120') 80%  
-            option(data-select2-id='121') 90%
-            option(data-select2-id='122') 100% 
-        td
-          button.col-lg-3.btn.btn-block.bg-gradient-success.btn-lg(type='button') Add Task 
+        form(action="", method="post") 
+          .form-group(data-select2-id='109').col-lg-10
+            label Status
+            select.form-control.select2bs4.select2-hidden-accessible(name='status' style='width: 100%;' data-select2-id='25' tabindex='-1' aria-hidden='true')
+              option(data-select2-id='112') New
+              option(data-select2-id='113') In progress
+              option(data-select2-id='114') Resolved
+              option(data-select2-id='115') Finish     
+          .form-group.col-lg-10
+            label Name Task
+            input.form-control(name='name-task' type='text' placeholder='Enter ...')  
+          .form-group.col-lg-10
+            label Description
+            textarea.form-control(name='description' rows='5' placeholder='Enter ...')
+          .form-group
+            label Date Start:
+            .input-group.col-lg-6
+              .input-group-prepend
+                span.input-group-text
+                  i.far.fa-clock
+              input.datepickle.form-control.float-right(name='date-start' type='text')
+            label Date End:
+            .input-group.col-lg-6
+              .input-group-prepend
+                span.input-group-text
+                  i.far.fa-clock
+              input.form-control.float-right(name='date-end' type='text')
+          .form-group(data-select2-id='109').col-lg-6
+            label % Done
+            select.form-control.select2bs4.select2-hidden-accessible(name='done' style='width: 100%;' data-select2-id='25' tabindex='-1' aria-hidden='true')
+              option(data-select2-id='112') 0%
+              option(data-select2-id='113') 10%
+              option(data-select2-id='114') 20%  
+              option(data-select2-id='115') 30%
+              option(data-select2-id='116') 40%
+              option(data-select2-id='117') 50%  
+              option(data-select2-id='118') 60%
+              option(data-select2-id='119') 70%
+              option(data-select2-id='120') 80%  
+              option(data-select2-id='121') 90%
+              option(data-select2-id='122') 100% 
+          td
+            button.col-lg-3.btn.btn-block.bg-gradient-success.btn-lg(type='submit') Add Task 
 
       .card-footer
         
