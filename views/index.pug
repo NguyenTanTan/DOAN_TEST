@@ -366,7 +366,7 @@ html(lang="en")
                 // small box
                 .small-box.bg-info
                   .inner
-                    h3 150
+                    h3= `${tasks.length}`
                     p Total Number Task
                   .icon
                     i.ion.ion-bag
@@ -398,7 +398,7 @@ html(lang="en")
                   .card-header
                     h3.card-title
                       i.ion.ion-clipboard.mr-1
-                      | To Do List
+                      | Tasks List
                     .card-tools
                       ul.pagination.pagination-sm
                         li.page-item
@@ -425,13 +425,13 @@ html(lang="en")
                           th(scope='col') Done
                           th(scope='col') T&aacute;c v&#x1EE5;
                       tbody
-                        each task in tasks 
+                        -for (var x = 0; x<tasks.length; x++)
                           tr
-                            th(scope='row') 1
-                            td= task.name 
-                            td= task.description 
+                            th(scope='row')= `${x+1}`
+                            td= tasks[x].name 
+                            td= tasks[x].description 
                             td
-                              case task.status 
+                              case tasks[x].status 
                                 when '0'
                                   span.badge.badge-primary= 'New'
                                 when '1'
@@ -442,16 +442,16 @@ html(lang="en")
                                   span.badge.badge-success= 'Finish'
                             td 26:06:2020 14:00
                             td 26:06:2020 14:00
-                            td= `${parseInt(task.done)*10}%`
+                            td= `${parseInt(tasks[x].done)*10}%`
                             td
-                              a.btn.btn-success.btn-sm.rounded-0.text-white(href=`/tasks/update/${task._id}` type='button' data-toggle='tooltip' data-placement='top' title='Edit')
+                              a.btn.btn-success.btn-sm.rounded-0.text-white(href=`/tasks/update/${tasks[x] ._id}` type='button' data-toggle='tooltip' data-placement='top' title='Edit')
                                 i.fa.fa-edit
-                              a.btn.btn-danger.btn-sm.rounded-0.text-white(href=`/tasks/delete/${task._id}` type='button' data-toggle='tooltip' data-placement='top' title='Delete')
+                              a.btn.btn-danger.btn-sm.rounded-0.text-white(href=`/tasks/delete/${tasks[x]._id}` type='button' data-toggle='tooltip' data-placement='top' title='Delete')
                                 i.fa.fa-trash
                   // /.card-body
                   .card-footer.clearfix
-                    button.btn.btn-primary.float-right(type="button")
-                      i.fas.fa-plus
+                    a.btn.btn-primary.float-right(type="button" href="/tasks/add")
+                      i.fas.fa-plus.mr-1
                       | Add item
                 // /.card
               // /.Left col

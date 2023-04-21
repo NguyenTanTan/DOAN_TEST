@@ -4,7 +4,7 @@ block content
     .card.card-primary
       .card-header
         h3.card-title Add Task
-      .card-body
+      form.card-body(action=`/tasks/update/${task._id}/edit?_method=put` method='POST')
         .form-group(data-select2-id='109').col-lg-10
           label Status
           select.form-control.select2bs4.select2-hidden-accessible(style='width: 100%;' data-select2-id='25' tabindex='-1' aria-hidden='true' name='status')
@@ -31,26 +31,26 @@ block content
                 option(data-select2-id='114' value='2') Resolved
         .form-group.col-lg-10
           label Name Task
-          input.form-control(type='text' placeholder='Enter ...' value= task.name)  
+          input.form-control(type='text' placeholder='Enter ...' value= task.name name='name')  
         .form-group.col-lg-10
           label Description
-          textarea.form-control(rows='5' placeholder='Enter ...')= task.description
+          textarea.form-control(rows='5' placeholder='Enter ...' name='description')= task.description
         .form-group
           label Date Start:
           .input-group.col-lg-6
             .input-group-prepend
               span.input-group-text
                 i.far.fa-clock
-            input.datepickle.form-control.float-right(type='text')
+            input.datepickle.form-control.float-right(type='text' name='startAt')
           label Date End:
           .input-group.col-lg-6
             .input-group-prepend
               span.input-group-text
                 i.far.fa-clock
-            input.form-control.float-right(type='text')
+            input.form-control.float-right(type='text' name='endAt')
         .form-group(data-select2-id='109').col-lg-6
           label % Done
-          select.form-control.select2bs4.select2-hidden-accessible(style='width: 100%;' data-select2-id='25' tabindex='-1' aria-hidden='true')
+          select.form-control.select2bs4.select2-hidden-accessible(style='width: 100%;' data-select2-id='25' tabindex='-1' aria-hidden='true' name='done')
             case task.done 
               when '0'
                 option(data-select2-id='112' value='0') 0%
@@ -185,7 +185,7 @@ block content
                 option(data-select2-id='120' value='8') 80%  
                 option(data-select2-id='121' value='9') 90%
         td
-          button.col-lg-2.btn.btn-block.bg-gradient-success.btn-lg(type='button') Update Task 
+          button.col-lg-2.btn.btn-block.bg-gradient-success.btn-lg(type='submit') Update Task 
 
       .card-footer
         

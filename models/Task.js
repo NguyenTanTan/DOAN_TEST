@@ -9,7 +9,7 @@ const TaskSchema = new Schema({
     status: { type: String },
     startAt: { type: Date, default: Date.now },
     done: {type: String},
-    endAt: {type: Date}
+    endAt: {type: Date, default: Date.now}
 
 }, {
     collection: 'task'

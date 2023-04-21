@@ -1,24 +1,24 @@
 var express = require('express');
 var router = express.Router();
-const taskController2 = require('../controllers/TaskController2')
+const taskController = require('../controllers/TaskController')
 
 
 // router.get('/add', function(req, res) {
 //   res.render('addTask');
 //   // res.send('Bạn đang tạo task mới');
 // });
-router.get('/add', taskController2.showAdd);
+router.get('/add', taskController.showAdd);
 
-router.get('/update/:id/', taskController2.showUpdate)
+router.get('/update/:id/', taskController.showUpdate)
 
-router.get('/update/:id/edit', taskController2.update)
+router.put('/update/:id/edit', taskController.update)
 
-router.get('/delete/:id', taskController2.delete)
+router.get('/delete/:id', taskController.delete)
 
-router.get('/tasks', taskController2.show)
+router.get('/', taskController.show)
 
 
 //Post task
-router.post('/store', taskController2.store);
+router.post('/store', taskController.store);
 
 module.exports = router;

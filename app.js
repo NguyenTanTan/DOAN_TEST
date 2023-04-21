@@ -3,12 +3,16 @@ var app = express();
 var index = require('./routes/index');
 var users = require('./routes/users');
 var tasks = require('./routes/tasks');
+const methodOverride = require('method-override')
 var db = require('./models/db')
 
 app.set('view engine', 'pug');
 app.set('views','./views');
 
 app.use(express.static('public'));
+
+// override with POST having ?_method=DELETE
+app.use(methodOverride('_method'))
 
 // Connect DB
 db.connect()
